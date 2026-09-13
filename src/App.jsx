@@ -67,7 +67,7 @@ const styleSheet = `
     --amber: #C97A2B;
     --mint: #1E9E70;
   }
-  .av-root .display{ font-family:'Space Grotesk', system-ui, sans-serif; }
+  .av-root .display{ font-family:'Space Grotesk', system-ui, sans-serif;  color: var(--text);}
   .av-root ::selection{ background: var(--accent); color: #FFFFFF; }
   .av-root *{ box-sizing: border-box; }
 
@@ -133,9 +133,9 @@ const styleSheet = `
 const skills = [
   { icon: Code2, name: "Python & Backend", level: "Advanced", pct: 90, tags: ["Python", "FastAPI", "Django"] },
   { icon: Bug, name: "Test Automation", level: "Expert", pct: 92, tags: ["Playwright", "Pytest", "API Testing"] },
-  { icon: TerminalSquare, name: "Full Stack Dev", level: "Advanced", pct: 85, tags: ["React", "FastAPI", "MERN"] },
+  { icon: TerminalSquare, name: "Full Stack Dev", level: "Advanced", pct: 85, tags: ["React", "FastAPI", "MERN" , "JavaScript "] },
   { icon: Database, name: "Databases", level: "Advanced", pct: 84, tags: ["PostgreSQL", "MySQL", "MongoDB", "SQLAlchemy"] },
-  { icon: Workflow, name: "Debugging & Ops", level: "Advanced", pct: 82, tags: ["Linux", "JIRA", "Log Analysis"] },
+  { icon: Workflow, name: "Debugging & Ops", level: "Advanced", pct: 82, tags: ["Linux", "JIRA", "Log Analysis" , "Swagger UI"] },
 ];
 
 const projects = [
@@ -203,6 +203,7 @@ const journey = [
     points: [
       "Built a Twitter-like social app — auth, tweets, likes, retweets, comments.",
       "Real-time feed with Redux and WebSockets; REST APIs integrated with MongoDB.",
+      "Implementing authentication and secure user management within the application."
     ],
   },
   {
@@ -494,17 +495,17 @@ export default function AkshaiPortfolio() {
         <div style={{ maxWidth: 1040, margin: "0 auto" }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 14, marginBottom: 22 }}>
             <span className="av-num" style={{ fontSize: 15 }}>01</span>
-            <h2 className="display" style={{ fontSize: 24, fontWeight: 700 }}>About Me</h2>
+            <h2 className="display" style={{ fontSize: 22, fontWeight: 700, color: "var(--text)" }}>About Me</h2>
           </div>
-          <div style={{ maxWidth: 660 }}>
-            <p style={{ color: "var(--text-dim)", fontSize: 15.5, lineHeight: 1.8, marginBottom: 16 }}>
-              I'm a <strong style={{ color: "var(--text)" }}>Quality Assurance Engineer at Amazon</strong>, where I
-              build automated test suites in Python with Playwright and Pytest, run API-level testing, and trace
-              regressions back to root cause across Kindle, Fire TV and their companion web apps.
+          <div style={{ maxWidth: 620 }}>
+            <p style={{ color: "var(--text-dim)", fontSize: 15, lineHeight: 1.8, marginBottom: 16 }}>
+              I currently work at <strong style={{ color: "var(--text)" }}>Amazon</strong>, where I build automated
+              test suites in Python with Playwright and Pytest, run API-level testing, and trace regressions back to
+              root cause across Kindle, Fire TV and their companion web apps.
             </p>
-            <p style={{ color: "var(--text-dim)", fontSize: 15.5, lineHeight: 1.8 }}>
+            <p style={{ color: "var(--text-dim)", fontSize: 15, lineHeight: 1.8 }}>
               Alongside that, I build backend services and REST APIs with <strong style={{ color: "var(--text)" }}>FastAPI</strong>,
-              SQLAlchemy and PostgreSQL. I'm currently looking to move from QA into an <strong style={{ color: "var(--text)" }}>SDET,
+              SQLAlchemy and PostgreSQL. I'm actively looking to move into an <strong style={{ color: "var(--text)" }}>SDET,
               Python backend, or automation-focused developer role</strong> — my test-automation background is the
               foundation, backend development is where I'm headed.
             </p>
@@ -610,7 +611,7 @@ export default function AkshaiPortfolio() {
               <Mail size={16} color="var(--accent)" /> akshaivenkatesh3105@gmail.com
             </CopyField>
             <CopyField value="+919150914731">
-              <Phone size={16} color="var(--accent)" /> +91 9150914731
+              <Phone size={16} color="var(--accent)" /> +91 9150914731 
             </CopyField>
             <div style={{ display: "flex", alignItems: "center", gap: 8, color: "var(--text-dim)", fontSize: 14 }}>
               <MapPin size={16} color="var(--accent)" /> Chennai, India
